@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import MusicTable from "./components/MusicTable";
-import Axios from 'axios';
+import axios from 'axios';
 
 import './App.css';
-import axios from 'axios';
+
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
+            music: [],
 
-        }
+        };
     }
+
+
+    async componentDidMount() {
+        await axios.get("http://www.devcodecampmusiclibrary.com/")
+        .then((res) => {
+            console.log(res)
+            const music = res.data;
+            this.setState({music});
+        });
+    }
+
+componentDidUpdate() {}
+
 }
 
-async componentDidMount() {
-    await axios.get('http://www.devcodecampmusiclibrary.com/')
-}
+export default App;
