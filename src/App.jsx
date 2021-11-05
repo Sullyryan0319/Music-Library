@@ -16,7 +16,7 @@ class App extends Component {
 
 
     async componentDidMount() {
-        await axios.get("http://www.devcodecampmusiclibrary.com/")
+        await axios.get("http://www.devcodecampmusiclibrary.com/api/music")
         .then((res) => {
             console.log(res)
             const music = res.data;
@@ -24,8 +24,16 @@ class App extends Component {
         });
     }
 
-componentDidUpdate() {}
+        componentDidUpdate() {}
+
+render() {
+    return(
+        <div>
+            <MusicTable music={this.state.music} />
+        </div>
+    )
+}
 
 }
 
-export default App;
+export default App; 
