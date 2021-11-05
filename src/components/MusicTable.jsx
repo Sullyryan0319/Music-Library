@@ -1,21 +1,23 @@
-import React from 'react';
-import App from './App';
+import React from "react";
 
-import './MusicTable.css'
+import "./MusicTable.css";
 
-const MusicTable = ({music}) => {
-    return(
-        <div>
+const MusicTable = ({ music }) => {
+  return (
+    <div>
+      <ul>
+        {music.map((music, index) => (
+          <li>
             <ul>
-                {music.map((e, i) => 
-                    <li key={i} className="no-dotz"></li>
-
-                )}
+              <li>Artist: {music.artist}</li> <li>Song Title: {music.title}</li>{" "}
+              <li>Album: {music.album}</li> <li>Genre: {music.genre}</li>{" "}
+              <li>Release Date: {music.releaseDate}</li>
             </ul>
-        </div>
-    );
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
-
-
 
 export default MusicTable;
