@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MusicTable from "./components/MusicTable";
 import axios from 'axios';
+import SearchBar from './components/SearchBar';
 
 import './App.css';
 
@@ -8,12 +9,20 @@ import './App.css';
 class App extends Component {
     constructor() {
         super();
+        this.handleChange = this.handleChange.bind(this);
+        
+    
+        
         this.state = {
             music: [],
-
+            ui: ''
+            
         };
     }
-
+    
+    handleChange(e) {
+        this.setState({ui: e.target.value});
+    }
 
     async componentDidMount() {
         await axios.get("http://www.devcodecampmusiclibrary.com/api/music")
@@ -29,8 +38,10 @@ class App extends Component {
 render() {
     return(
         <div>
-            <MusicTable music={this.state.music} />
+            <SearchBar ui={this.state.ui} handleChange={this.handleChange}/>
+            <MusicTable music={this.state.music} ui={this.state.ui} />
         </div>
+        
     )
 }
 
