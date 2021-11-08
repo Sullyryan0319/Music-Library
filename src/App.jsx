@@ -34,9 +34,14 @@ class App extends Component {
 
   render() {
     return (
-
       <div>
-        <div className="search-format grid">
+        <nav class="nav">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">TBD</a>
+          <a class="nav-link" href="#">TBD</a>
+          <a class="nav-link" href="#">TBD</a>
+        </nav>
+        <div className="search-layout">
           <SearchBar ui={this.state.ui} handleChange={this.handleChange} />
         </div>
         <div className="table-format grid">

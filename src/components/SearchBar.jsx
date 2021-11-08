@@ -4,12 +4,12 @@ const SearchBar = (props) => {
    
   
     return(
-        <fieldset>
+        <div className="search-layout">
             <legend>Search by: Artist, Song Title, Album, Genre or Release Date...</legend>
             <input
             value={props.ui}
             onChange={props.handleChange} />
-        </fieldset>
+        </div>
     )
 }
 

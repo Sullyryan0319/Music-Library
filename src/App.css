@@ -2,3 +2,23 @@
     display: grid;
     place-content: center;
 }
+
+.nav {
+    height: 30px;
+    background-color: #9E0D0D;
+    
+}
+
+.nav-link {
+    background-color: #090909;
+    margin: 2px;
+    text-align: center;
+}
+
+.search-layout {
+    place-content: center;
+    width: 20%;
+    place-content: center;
+    border: 2px;
+    background-color: violet;
+}
