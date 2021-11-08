@@ -17,7 +17,7 @@ const MusicTable = ({ music, ui }) => {
               <ul>
                 <li>Artist: {song.artist}</li>{" "}
                 <li>Song Title: {song.title}</li>{" "}
-                <li>Album: {song.album}</li>{" "}
+                <li>Album: {song.album}</li>{" "}  
                 <li>Genre: {song.genre}</li>{" "}
                 <li>Release Date: {song.releaseDate}</li>
               </ul>            
