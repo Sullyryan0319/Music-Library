@@ -1,24 +1,48 @@
+Body {
+    background-color: #262525;
+}
+
 .grid{
     display: grid;
     place-content: center;
 }
 
 .nav {
-    height: 30px;
+    height: 35px;
     background-color: #9E0D0D;
     
 }
 
 .nav-link {
-    background-color: #090909;
+    margin-right: 15px;
+    height: 25px;
+    background-color: #262525;
     margin: 2px;
     text-align: center;
+    color: white;
 }
 
 .search-layout {
-    place-content: center;
+    border-radius: 10px;
+    margin-top: 2%;
+    Margin-left: 40%;
     width: 20%;
-    place-content: center;
     border: 2px;
-    background-color: violet;
+    background-color: #9E0D0D;
 }
+
+.center {
+    background-color: #9E0D0D;
+
+}
+
+.table-styles {
+    width: 1000px;
+    margin-top: 2%;
+    height: 20%;
+    overflow: scroll;
+    border-radius: 10px;
+    background-color: #9E0D0D;
+}
+
+
