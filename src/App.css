@@ -14,6 +14,7 @@ Body {
 }
 
 .nav-link {
+    border-radius: 5px;
     margin-right: 15px;
     height: 25px;
     background-color: #262525;
@@ -21,6 +22,14 @@ Body {
     text-align: center;
     color: white;
 }
+
+
+.center {
+    background-color: #9E0D0D;
+    
+
+}
+
 
 .search-layout {
     border-radius: 10px;
@@ -31,20 +40,5 @@ Body {
     background-color: #9E0D0D;
 }
 
-.center {
-    background-color: #9E0D0D;
-    
-
-}
-
-
-.table-styles {
-    width: 1000px;
-    margin-top: 2%;
-    height: 20%;
-    overflow: scroll;
-    border-radius: 10px;
-    background-color: #9E0D0D;
-}
 
 

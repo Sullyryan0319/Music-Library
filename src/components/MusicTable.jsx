@@ -14,7 +14,7 @@ const MusicTable = ({ music, ui }) => {
           song.album.includes(ui) ? (
             <li>
               {" "}        
-              <ul>
+              <ul className="ul-style">
                 <li>Artist: {song.artist}</li>{" "}
                 <li>Song Title: {song.title}</li>{" "}
                 <li>Album: {song.album}</li>{" "}  

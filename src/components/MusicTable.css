@@ -1,0 +1,16 @@
+.ul-style{
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: 5px solid #9E0D0D;
+}
+
+.table-styles {
+    min-height: 400px;
+    width: 1000px;
+    margin-top: 2%;
+    height: 20%;
+    overflow: scroll;
+    border-radius: 10px;
+    background-color: #9E0D0D;
+}
