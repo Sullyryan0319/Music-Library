@@ -1,10 +1,11 @@
 .search-layout {
+    border-radius: 5px;
     font-size: 1rem;
     margin-top: 2%;
     Margin-left: 40%;
     width: 20%;
     border: 2px black double ;
-    background-color: #9E0D0D;
+    background-color: black;
 }
 
 .grid{

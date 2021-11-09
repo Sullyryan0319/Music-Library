@@ -36,10 +36,10 @@ class App extends Component {
     return (
       <div>
         <nav class="nav">
-          <a class="nav-link" href="#">Home</a>
-          <a class="nav-link" href="#">TBD</a>
-          <a class="nav-link" href="#">TBD</a>
-          <a class="nav-link" href="#">TBD</a>
+          <a class="nav-link" href="#">HOME</a>
+          <a class="nav-link" href="#">NEWS</a>
+          <a class="nav-link" href="#">BROWSE</a>
+          <a class="nav-link" href="#">CONTACT</a>
         </nav>
         <div className="search-layout">
           <SearchBar ui={this.state.ui} handleChange={this.handleChange} />
