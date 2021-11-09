@@ -1,14 +1,15 @@
 .search-layout {
     font-size: 1rem;
-    border-radius: 10px;
     margin-top: 2%;
     Margin-left: 40%;
     width: 20%;
-    border: 2px;
+    border: 2px black double ;
     background-color: #9E0D0D;
 }
 
 .grid{
+    position: relative;
     display: grid;
     place-content: center;
 }
+

@@ -6,10 +6,12 @@ const SearchBar = (props) => {
   
     return(
         <div className="search-layout">
-            <legend className="center">Search</legend>
-            <input className="grid"
+            <legend className="grid">Search</legend>
+            <div className="grid ">
+            <input
             value={props.ui}
             onChange={props.handleChange} />
+            </div>
         </div>
     )
 }
