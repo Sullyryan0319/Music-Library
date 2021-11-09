@@ -21,7 +21,7 @@ const MusicTable = ({ music, ui }) => {
                 <li>Genre: {song.genre}</li>{" "}
                 <li>Release Date: {song.releaseDate}</li>
               </ul>            
-            </li>
+            </li>            
           ) : null
         )}
       </ul>
