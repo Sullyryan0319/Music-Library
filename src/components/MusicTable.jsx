@@ -7,11 +7,11 @@ const MusicTable = ({ music, ui }) => {
     <div className="table-styles">
       <ul>
         {music.map((song, i) =>
-          song.title.includes(ui) ||
-          song.artist.includes(ui) ||
-          song.genre.includes(ui) ||
-          song.releaseDate.includes(ui) ||
-          song.album.includes(ui) ? (
+          song.title.toLowerCase().includes(ui) ||
+          song.artist.toLowerCase().includes(ui) ||
+          song.genre.toLowerCase().includes(ui) ||
+          song.releaseDate.toLowerCase().includes(ui) ||
+          song.album.toLowerCase().includes(ui) ? (
             <li>
               {" "}        
               <ul className="ul-style">
