@@ -7,7 +7,7 @@ const SearchBar = (props) => {
     return(
         <div className="search-layout">
             <div className="grid ">
-            <input 
+            <input
             placeholder="Search: Artist, Title..."
             value={props.ui}
             onChange={props.handleChange} />
