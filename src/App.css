@@ -4,7 +4,7 @@ Body {
   background-image: repeating-radial-gradient(
       circle at 0 0,
       transparent 0,
-      #262525 40px
+      #262525 125px
     ),
     repeating-linear-gradient(#9e0d0d55, #9e0d0d);
 }
@@ -16,16 +16,15 @@ Body {
 
 .nav {
   height: 40px;
-  background-color: #9e0d0d;
+  background-color: #262525;
 }
 
 .nav-link {
   padding: 8px;
   border-radius: 5px;
-  margin-right: 15px;
+  margin-right: 20px;
   height: 20px;
-  background-color: #262525;
-  margin: 2px;
+  background-color: #9e0d0d;
   text-align: center;
   color: white;
 }
