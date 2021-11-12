@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import MusicTable from "./components/MusicTable";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
-
 import "./App.css";
 
 class App extends Component {
@@ -22,7 +21,7 @@ class App extends Component {
 
   async componentDidMount() {
     await axios
-      .get("http://www.devcodecampmusiclibrary.com/api/music")
+      .get("http://localhost:8080/api/songs")
       .then((res) => {
         console.log(res);
         const music = res.data;
