@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./AddMusic.css";
 
-const AddMusic = (props) => {
+const AddMusicForm = (props) => {
    
   
     return(
@@ -32,4 +32,4 @@ const AddMusic = (props) => {
 }
 
 
-export default AddMusic;
+export default AddMusicForm;

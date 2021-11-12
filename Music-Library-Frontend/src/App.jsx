@@ -3,7 +3,7 @@ import MusicTable from "./components/MusicTable";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
-import AddMusic from "./components/AddMusic";
+import AddMusicForm from "./components/AddMusic";
 
 class App extends Component {
   constructor() {
@@ -31,6 +31,9 @@ class App extends Component {
       });
   }
 
+
+  
+
   componentDidUpdate() {}
 
   render() {
@@ -49,7 +52,7 @@ class App extends Component {
           <MusicTable music={this.state.music} ui={this.state.ui} />
         </div>
         <div>
-          <AddMusic newSong= {this.state.newSong}/>
+          <AddMusicForm/>
         </div>
       </div>
     );
