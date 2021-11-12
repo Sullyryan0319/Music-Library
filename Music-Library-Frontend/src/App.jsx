@@ -3,11 +3,13 @@ import MusicTable from "./components/MusicTable";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import "./App.css";
+import AddMusic from "./components/AddMusic";
 
 class App extends Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       music: [],
@@ -45,6 +47,9 @@ class App extends Component {
         </div>
         <div className="table-format grid">
           <MusicTable music={this.state.music} ui={this.state.ui} />
+        </div>
+        <div>
+          <AddMusic newSong= {this.state.newSong}/>
         </div>
       </div>
     );
