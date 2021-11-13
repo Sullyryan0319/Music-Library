@@ -14,12 +14,19 @@ const AddMusicForm = (props) => {
 //todo   change state variables in form + import post method from app as props + set up handle submit for form (david's tutorial)
 //
 
-    const handleSubmit = () => {
-        props.postNewSong();
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.postNewSong({
+            title: songTitle,
+            album: Album,
+            artist: artistName,
+            genre: Genre,
+            releaseDate: releaseDate,
+        });
     }
 
     return(
-        <form onSubmit={handleSubmit()}>
+        <form onSubmit={(e) => handleSubmit(e)}>
             <input
             placeholder="Artist Name..."
             value={artistName}

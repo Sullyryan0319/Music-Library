@@ -34,14 +34,16 @@ class App extends Component {
       });
   }
 
-  async postNewSong() {
+  postNewSong =async (song) =>  {
+    debugger
     await axios
-      .post("http://localhost:8080/api/songs")
+      .post("http://localhost:8080/api/songs", song)
       .then((res) => {
         console.log(res);
         const song = res.data;
         this.setState({ addedSong: song });
       });
+      this.getAllSongs();
   }
 
 
@@ -69,9 +71,6 @@ class App extends Component {
         </div>
         <div className="table-format grid">
           <MusicTable music={this.state.music} ui={this.state.ui} />
-        </div>
-        <div className="form-style">
-          <AddMusicForm postNewSong = {this.postNewSong}/>
         </div>
       </div>
     );
