@@ -46,8 +46,6 @@ class App extends Component {
 
 
 
-  
-
   componentDidUpdate(prevState) {
     if(this.state.addedSong !== prevState.addedSong){
       this.getAllSongs();
@@ -60,16 +58,19 @@ class App extends Component {
         <nav class="nav">
           <a class="nav-link" href="#">HOME</a>
           <a class="nav-link" href="#">NEWS</a>
-          <a class="nav-link" href="#">BROWSE</a>
+          <a class="nav-link" href="https://www.google.com/">BROWSE</a>
           <a class="nav-link" href="#">CONTACT</a>
         </nav>
         <div className="search-layout">
           <SearchBar ui={this.state.ui} handleChange={this.handleChange} />
         </div>
+        <div className="form-style">
+          <AddMusicForm postNewSong = {this.postNewSong}/>
+        </div>
         <div className="table-format grid">
           <MusicTable music={this.state.music} ui={this.state.ui} />
         </div>
-        <div>
+        <div className="form-style">
           <AddMusicForm postNewSong = {this.postNewSong}/>
         </div>
       </div>

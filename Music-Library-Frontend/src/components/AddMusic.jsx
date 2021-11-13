@@ -5,36 +5,47 @@ import "./AddMusic.css";
 
 const AddMusicForm = (props) => {
   
-    const [artistName,setArtistName] = useState("Ryan")
+    const [artistName,setArtistName] = useState("");
+    const [songTitle,setSongTitle] = useState("");
+    const [Album,setAlbum] = useState("");
+    const [Genre,setGenre] = useState("");
+    const [releaseDate,setReleaseDate] = useState("");
 
-    
+//todo   change state variables in form + import post method from app as props + set up handle submit for form (david's tutorial)
+//
+
+    const handleSubmit = () => {
+        props.postNewSong();
+    }
+
     return(
-        <form>
+        <form onSubmit={handleSubmit()}>
             <input
             placeholder="Artist Name..."
             value={artistName}
             onChange={(e) => setArtistName(e.target.value)} />
             <input
             placeholder="Song Title..."
-            value={props.ui}
-            onChange={props.handleChange} />
+            value={songTitle}
+            onChange={(e) => setSongTitle(e.target.value)} />
             <input
             placeholder="Album..."
-            value={props.ui}
-            onChange={props.handleChange} />
+            value={Album}
+            onChange={(e) => setAlbum(e.target.value)} />
             <input
             placeholder="Genre..."
-            value={props.ui}
-            onChange={props.handleChange} />
+            value={Genre}
+            onChange={(e) => setGenre(e.target.value)} />
             <input
             placeholder="Release Date..."
-            value={props.ui}
-            onChange={props.handleChange} />
+            value={releaseDate}
+            onChange={(e) => setReleaseDate(e.target.value)} />
             <input 
             type= "submit"/>
         </form>
     )
 }
+
 
 
 export default AddMusicForm;

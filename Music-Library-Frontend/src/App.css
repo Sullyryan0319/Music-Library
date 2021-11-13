@@ -1,5 +1,5 @@
 Body {
-    overflow: hidden;
+    /* overflow: hidden; */
   background-color: #262525;
   opacity: 0.8;
   background-image: repeating-radial-gradient(
@@ -33,3 +33,4 @@ Body {
 .center {
   margin-left: 10px;
 }
+
