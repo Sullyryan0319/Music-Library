@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       music: [],
       ui: "",
+      addedSong: {},
     };
   }
 
@@ -21,7 +22,9 @@ class App extends Component {
     this.setState({ ui: e.target.value });
   }
 
-  async componentDidMount() {
+  componentDidMount(){this.getAllSongs()}
+
+  async getAllSongs() {
     await axios
       .get("http://localhost:8080/api/songs")
       .then((res) => {
@@ -31,10 +34,25 @@ class App extends Component {
       });
   }
 
+  async postNewSong() {
+    await axios
+      .post("http://localhost:8080/api/songs")
+      .then((res) => {
+        console.log(res);
+        const song = res.data;
+        this.setState({ addedSong: song });
+      });
+  }
+
+
 
   
 
-  componentDidUpdate() {}
+  componentDidUpdate(prevState) {
+    if(this.state.addedSong !== prevState.addedSong){
+      this.getAllSongs();
+    }
+  }
 
   render() {
     return (
@@ -52,7 +70,7 @@ class App extends Component {
           <MusicTable music={this.state.music} ui={this.state.ui} />
         </div>
         <div>
-          <AddMusicForm/>
+          <AddMusicForm postNewSong = {this.postNewSong}/>
         </div>
       </div>
     );

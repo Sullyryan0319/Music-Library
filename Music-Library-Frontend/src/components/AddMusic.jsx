@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import "./AddMusic.css";
 
+
 const AddMusicForm = (props) => {
-   
   
+    const [artistName,setArtistName] = useState("Ryan")
+
+    
     return(
-        <div>
+        <form>
             <input
             placeholder="Artist Name..."
-            value={props.ui}
-            onChange={props.handleChange} />
+            value={artistName}
+            onChange={(e) => setArtistName(e.target.value)} />
             <input
             placeholder="Song Title..."
             value={props.ui}
@@ -27,7 +30,9 @@ const AddMusicForm = (props) => {
             placeholder="Release Date..."
             value={props.ui}
             onChange={props.handleChange} />
-        </div>
+            <input 
+            type= "submit"/>
+        </form>
     )
 }
 
