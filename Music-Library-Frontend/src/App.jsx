@@ -34,9 +34,18 @@ class App extends Component {
       });
   }
 
-  postNewSong =async (song) =>  {
-    debugger
+  async getSongById() {
     await axios
+      .get("http://localhost:8080/api/songs/:id")
+      .then((res) => {
+        console.log(res);
+        const selectedSong = res.data;
+        this.setState({ selectedSong });
+      });
+  }
+
+  postNewSong =async (song) =>  {
+     await axios
       .post("http://localhost:8080/api/songs", song)
       .then((res) => {
         console.log(res);
@@ -45,6 +54,17 @@ class App extends Component {
       });
       this.getAllSongs();
   }
+
+  // putNewSong =async (updatedSong) =>  {
+  //    await axios
+  //     .put("http://localhost:8080/api/songs/:id", updatedSong)
+  //     .then((res) => {
+  //       console.log(res);
+  //       const song = res.data;
+  //       this.setState({ addedSong: updatedSong });
+  //     });
+  //     this.getAllSongs();
+  // }
 
 
 
