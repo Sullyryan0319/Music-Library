@@ -15,6 +15,7 @@ class App extends Component {
       music: [],
       ui: "",
       addedSong: {},
+      editedSong: {},
     };
   }
 
@@ -34,15 +35,15 @@ class App extends Component {
       });
   }
 
-  async getSongById() {
-    await axios
-      .get("http://localhost:8080/api/songs/:id")
-      .then((res) => {
-        console.log(res);
-        const selectedSong = res.data;
-        this.setState({ selectedSong });
-      });
-  }
+  // async getSongById() {
+  //   await axios
+  //     .get("http://localhost:8080/api/songs/:id")
+  //     .then((res) => {
+  //       console.log(res);
+  //       const selectedSong = res.data;
+  //       this.setState({ selectedSong });
+  //     });
+  // }
 
   postNewSong =async (song) =>  {
      await axios
@@ -55,21 +56,34 @@ class App extends Component {
       this.getAllSongs();
   }
 
-  // putNewSong =async (updatedSong) =>  {
+  // editSong =async (updatedSong) =>  {
   //    await axios
   //     .put("http://localhost:8080/api/songs/:id", updatedSong)
   //     .then((res) => {
   //       console.log(res);
-  //       const song = res.data;
-  //       this.setState({ addedSong: updatedSong });
+  //       const updatedSong = res.data;
+  //       this.setState({ editedSong: updatedSong });
   //     });
   //     this.getAllSongs();
   // }
 
+  // deleteSong =async () =>  {
+  //    await axios
+  //     .delete("http://localhost:8080/api/songs/:id", updatedList)
+  //     .then((res) => {
+  //       console.log(res);
+  //       const updatedList = res.data;
+  //       this.setState({ newList: updatedList });
+  //     });
+  //     this.getAllSongs(); 
+  // }
+
+
+
 
 
   componentDidUpdate(prevState) {
-    if(this.state.addedSong !== prevState.addedSong){
+    if(this.state.addedSong !== prevState.addedSong || this.state.editedSong !== prevState.editedSong){
       this.getAllSongs();
     }
   }
@@ -86,12 +100,15 @@ class App extends Component {
         <div className="search-layout">
           <SearchBar ui={this.state.ui} handleChange={this.handleChange} />
         </div>
-        <div className="form-style">
-          <AddMusicForm postNewSong = {this.postNewSong}/>
-        </div>
-        <div className="table-format grid">
+        <div>
+          <div className="form-style">
+            <AddMusicForm postNewSong = {this.postNewSong}/>
+          </div>
+          <div className="table-format grid">
           <MusicTable music={this.state.music} ui={this.state.ui} />
+          </div>
         </div>
+       
       </div>
     );
   }

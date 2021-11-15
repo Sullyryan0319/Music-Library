@@ -26,30 +26,34 @@ const AddMusicForm = (props) => {
     }
 
     return(
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <input
-            placeholder="Artist Name..."
-            value={artistName}
-            onChange={(e) => setArtistName(e.target.value)} />
-            <input
-            placeholder="Song Title..."
-            value={songTitle}
-            onChange={(e) => setSongTitle(e.target.value)} />
-            <input
-            placeholder="Album..."
-            value={Album}
-            onChange={(e) => setAlbum(e.target.value)} />
-            <input
-            placeholder="Genre..."
-            value={Genre}
-            onChange={(e) => setGenre(e.target.value)} />
-            <input
-            placeholder="Release Date..."
-            value={releaseDate}
-            onChange={(e) => setReleaseDate(e.target.value)} />
-            <input 
-            type= "submit"/>
-        </form>
+        <div>
+            <h2 className="form-heading">Add Music</h2>
+            <form onSubmit={(e) => handleSubmit(e)}>
+                <input
+                placeholder="Artist Name..."
+                value={artistName}
+                onChange={(e) => setArtistName(e.target.value)} />
+                <input
+                placeholder="Song Title..."
+                value={songTitle}
+                onChange={(e) => setSongTitle(e.target.value)} />
+                <input
+                placeholder="Album..."
+                value={Album}
+                onChange={(e) => setAlbum(e.target.value)} />
+                <input
+                placeholder="Genre..."
+                value={Genre}
+                onChange={(e) => setGenre(e.target.value)} />
+                <input
+                placeholder="Release Date..."
+                value={releaseDate}
+                onChange={(e) => setReleaseDate(e.target.value)} />
+                <input 
+                type= "submit"/>
+            </form>
+
+        </div>
     )
 }
 

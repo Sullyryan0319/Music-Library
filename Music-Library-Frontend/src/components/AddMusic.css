@@ -1,5 +1,16 @@
 .form-style{
-    border: 10px solid black;
-    width:fit-content;
+    background-color: #9E0D0D;
+    border: 10px double black;
+    width: 200px;
+    float: left;
+    align-content: center;
+    z-index: 2;
+    flex-grow: 1;
+    
+}
+
+.form-heading {
+    background-color: black;
+    color: white;
     
 }

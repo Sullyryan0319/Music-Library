@@ -10,10 +10,11 @@
 .table-styles {
     position: relative;
     min-height: 500px;
-    width: 600px;
+    width: 500px;
     margin-top: 2%;
     height: 20%;
     overflow-y: scroll;
-    border: 5px black double;
+    border: 10px black double;
     background-color: #9E0D0D;
+    float: left;
 }
